@@ -15,23 +15,6 @@
 		7BCE1567286C366900C1E10E /* BLSSwiftWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCE1566286C366900C1E10E /* BLSSwiftWrapper.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXBuildRule section */
-		7BCE13F1286A668E00C1E10E /* PBXBuildRule */ = {
-			isa = PBXBuildRule;
-			compilerSpec = com.apple.compilers.proxy.script;
-			filePatterns = "*.ll";
-			fileType = pattern.proxy;
-			inputFiles = (
-			);
-			isEditable = 1;
-			name = "Files matching '*.ll'";
-			outputFiles = (
-				"${PER_ARCH_OBJECT_FILE_DIR}/${INPUT_FILE_BASE}.o",
-			);
-			script = "`xcode-select -p`/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -c ${INPUT_FILE_PATH} -o ${PER_ARCH_OBJECT_FILE_DIR}/${INPUT_FILE_BASE}.o -arch $CURRENT_ARCH -fembed-bitcode -fno-common $OTHER_CFLAGS\n";
-		};
-/* End PBXBuildRule section */
-
 /* Begin PBXContainerItemProxy section */
 		7B01164E287342C500B1CE7D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1381,7 +1364,6 @@
 				7B011680287633BD00B1CE7D /* Frameworks */,
 			);
 			buildRules = (
-				7BCE13F1286A668E00C1E10E /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
