@@ -9,13 +9,6 @@
 /* Begin PBXBuildFile section */
 		7B0112D628732B3000B1CE7D /* bls_c384_256.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B0111AB287325DE00B1CE7D /* bls_c384_256.cpp */; };
 		7B0112D728732B7B00B1CE7D /* bls.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B011157287325DE00B1CE7D /* bls.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7B01164928733D5500B1CE7D /* dump_code.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B01162128733CD000B1CE7D /* dump_code.cpp */; };
-		7B01164A28733D5500B1CE7D /* base64.ll in Sources */ = {isa = PBXBuildFile; fileRef = 7B01163628733CD100B1CE7D /* base64.ll */; };
-		7B01164B28733D5500B1CE7D /* fp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B01164328733CD100B1CE7D /* fp.cpp */; };
-		7B01164D287341BF00B1CE7D /* bls384_256.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B011156287325DE00B1CE7D /* bls384_256.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7B0116502873459500B1CE7D /* bn_c384_256.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B0115B328733CD000B1CE7D /* bn_c384_256.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7B0116512873459500B1CE7D /* bn.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B01159E28733CD000B1CE7D /* bn.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7B011652287346E600B1CE7D /* curve_type.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B0115B628733CD000B1CE7D /* curve_type.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7B0DDE7C2868FF5900D99B8C /* BLSSwiftWrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0DDE7B2868FF5900D99B8C /* BLSSwiftWrapperTests.swift */; };
 		7B0DDFCD2868FFFF00D99B8C /* BLSSwiftWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B0DDFCC2868FFD700D99B8C /* BLSSwiftWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7BCE1567286C366900C1E10E /* BLSSwiftWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCE1566286C366900C1E10E /* BLSSwiftWrapper.m */; };
@@ -1211,31 +1204,31 @@
 		7B01162028733CD000B1CE7D /* src */ = {
 			isa = PBXGroup;
 			children = (
-				7B01162128733CD000B1CE7D /* dump_code.cpp */,
-				7B01162228733CD000B1CE7D /* proj */,
-				7B01162428733CD000B1CE7D /* fp_static_code.hpp */,
-				7B01162528733CD000B1CE7D /* she_c256.cpp */,
-				7B01162628733CD000B1CE7D /* gen.cpp */,
 				7B01162728733CD000B1CE7D /* asm */,
-				7B01163328733CD100B1CE7D /* ecdsa_c.cpp */,
-				7B01163428733CD100B1CE7D /* bn_c384_256.cpp */,
-				7B01163528733CD100B1CE7D /* bn_c512.cpp */,
-				7B01163628733CD100B1CE7D /* base64.ll */,
-				7B01163728733CD100B1CE7D /* she_c384.cpp */,
-				7B01163828733CD100B1CE7D /* low_func_llvm.hpp */,
-				7B01163928733CD100B1CE7D /* xbyak */,
-				7B01163D28733CD100B1CE7D /* sqr256_wasm.hpp */,
 				7B01163E28733CD100B1CE7D /* base32.ll */,
-				7B01163F28733CD100B1CE7D /* proto.hpp */,
-				7B01164028733CD100B1CE7D /* she_c384_256.cpp */,
-				7B01164128733CD100B1CE7D /* fp_generator.hpp */,
+				7B01163628733CD100B1CE7D /* base64.ll */,
 				7B01164228733CD100B1CE7D /* bn_c256.cpp */,
-				7B01164328733CD100B1CE7D /* fp.cpp */,
-				7B01164428733CD100B1CE7D /* llvm_gen.hpp */,
-				7B01164528733CD100B1CE7D /* she_c_impl.hpp */,
+				7B01163428733CD100B1CE7D /* bn_c384_256.cpp */,
 				7B01164628733CD100B1CE7D /* bn_c384.cpp */,
+				7B01163528733CD100B1CE7D /* bn_c512.cpp */,
+				7B01162128733CD000B1CE7D /* dump_code.cpp */,
+				7B01163328733CD100B1CE7D /* ecdsa_c.cpp */,
+				7B01164128733CD100B1CE7D /* fp_generator.hpp */,
+				7B01162428733CD000B1CE7D /* fp_static_code.hpp */,
+				7B01164328733CD100B1CE7D /* fp.cpp */,
+				7B01162628733CD000B1CE7D /* gen.cpp */,
+				7B01164428733CD100B1CE7D /* llvm_gen.hpp */,
+				7B01163828733CD100B1CE7D /* low_func_llvm.hpp */,
 				7B01164728733CD100B1CE7D /* low_func_wasm.hpp */,
 				7B01164828733CD100B1CE7D /* low_func.hpp */,
+				7B01162228733CD000B1CE7D /* proj */,
+				7B01163F28733CD100B1CE7D /* proto.hpp */,
+				7B01164528733CD100B1CE7D /* she_c_impl.hpp */,
+				7B01162528733CD000B1CE7D /* she_c256.cpp */,
+				7B01164028733CD100B1CE7D /* she_c384_256.cpp */,
+				7B01163728733CD100B1CE7D /* she_c384.cpp */,
+				7B01163D28733CD100B1CE7D /* sqr256_wasm.hpp */,
+				7B01163928733CD100B1CE7D /* xbyak */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -1344,11 +1337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B0DDFCD2868FFFF00D99B8C /* BLSSwiftWrapper.h in Headers */,
-				7B01164D287341BF00B1CE7D /* bls384_256.h in Headers */,
 				7B0112D728732B7B00B1CE7D /* bls.h in Headers */,
-				7B0116502873459500B1CE7D /* bn_c384_256.h in Headers */,
-				7B0116512873459500B1CE7D /* bn.h in Headers */,
-				7B011652287346E600B1CE7D /* curve_type.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1438,10 +1427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BCE1567286C366900C1E10E /* BLSSwiftWrapper.m in Sources */,
-				7B01164A28733D5500B1CE7D /* base64.ll in Sources */,
 				7B0112D628732B3000B1CE7D /* bls_c384_256.cpp in Sources */,
-				7B01164928733D5500B1CE7D /* dump_code.cpp in Sources */,
-				7B01164B28733D5500B1CE7D /* fp.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1566,17 +1552,12 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
-					"-DBLS_ETH",
-					"-DBLS_SWAP_G",
 					"-DMCL_DONT_USE_OPENSSL",
 					"-DMCL_DONT_USE_XBYAK",
 					"-DMCL_LLVM_BMI2=0",
 					"-DMCL_USE_LLVM=1",
 					"-DMCL_USE_VINT",
 					"-DMCL_VINT_FIXED_BUFFER",
-					"-DMCL_SIZEOF_UNIT=8",
-					"-DMCLBN_FP_UNIT_SIZE=6",
-					"-DMCLBN_FR_UNIT_SIZE=4",
 					"-DPIC",
 					"-fPIC",
 				);
@@ -1656,17 +1637,12 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				OTHER_CFLAGS = (
-					"-DBLS_ETH",
-					"-DBLS_SWAP_G",
 					"-DMCL_DONT_USE_OPENSSL",
 					"-DMCL_DONT_USE_XBYAK",
 					"-DMCL_LLVM_BMI2=0",
 					"-DMCL_USE_LLVM=1",
 					"-DMCL_USE_VINT",
 					"-DMCL_VINT_FIXED_BUFFER",
-					"-DMCL_SIZEOF_UNIT=8",
-					"-DMCLBN_FP_UNIT_SIZE=6",
-					"-DMCLBN_FR_UNIT_SIZE=4",
 					"-DPIC",
 					"-fPIC",
 				);
