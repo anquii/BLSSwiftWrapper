@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		7B0112D628732B3000B1CE7D /* bls_c384_256.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B0111AB287325DE00B1CE7D /* bls_c384_256.cpp */; };
 		7B0112D728732B7B00B1CE7D /* bls.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B011157287325DE00B1CE7D /* bls.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7B01166C2875F79700B1CE7D /* fp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B01164328733CD100B1CE7D /* fp.cpp */; };
-		7B01166D2875F7D500B1CE7D /* base64.ll in Sources */ = {isa = PBXBuildFile; fileRef = 7B01163628733CD100B1CE7D /* base64.ll */; };
+		7B011682287633C800B1CE7D /* MCLSwiftWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 7B01166A2875F6C600B1CE7D /* MCLSwiftWrapper */; };
 		7B0DDE7C2868FF5900D99B8C /* BLSSwiftWrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0DDE7B2868FF5900D99B8C /* BLSSwiftWrapperTests.swift */; };
 		7B0DDFCD2868FFFF00D99B8C /* BLSSwiftWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B0DDFCC2868FFD700D99B8C /* BLSSwiftWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7BCE1567286C366900C1E10E /* BLSSwiftWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCE1566286C366900C1E10E /* BLSSwiftWrapper.m */; };
@@ -404,6 +403,17 @@
 		7BCE1566286C366900C1E10E /* BLSSwiftWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLSSwiftWrapper.m; sourceTree = "<group>"; };
 		7BE3282128674F360041C626 /* BLSSwiftWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BLSSwiftWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7B011680287633BD00B1CE7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B011682287633C800B1CE7D /* MCLSwiftWrapper in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		7B01112D287325DE00B1CE7D /* bls */ = {
@@ -1368,6 +1378,7 @@
 			buildPhases = (
 				7BE3281C28674F360041C626 /* Headers */,
 				7BCE139F286A53D800C1E10E /* Sources */,
+				7B011680287633BD00B1CE7D /* Frameworks */,
 			);
 			buildRules = (
 				7BCE13F1286A668E00C1E10E /* PBXBuildRule */,
@@ -1435,9 +1446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BCE1567286C366900C1E10E /* BLSSwiftWrapper.m in Sources */,
-				7B01166D2875F7D500B1CE7D /* base64.ll in Sources */,
 				7B0112D628732B3000B1CE7D /* bls_c384_256.cpp in Sources */,
-				7B01166C2875F79700B1CE7D /* fp.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
