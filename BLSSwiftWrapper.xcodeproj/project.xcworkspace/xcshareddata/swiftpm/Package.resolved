@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "MCLSwiftWrapper",
+        "repositoryURL": "https://github.com/anquii/MCLSwiftWrapper.git",
+        "state": {
+          "branch": null,
+          "revision": "8c72c7fe4fe4ecdbf285801ab5d235d1a9434f7c",
+          "version": "1.61.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
