@@ -1559,6 +1559,7 @@
 					"-DMCL_USE_LLVM=1",
 					"-DMCL_USE_VINT",
 					"-DMCL_VINT_FIXED_BUFFER",
+					"-DBLS_ETH=1",
 					"-DPIC",
 					"-fPIC",
 				);
@@ -1644,6 +1645,7 @@
 					"-DMCL_USE_LLVM=1",
 					"-DMCL_USE_VINT",
 					"-DMCL_VINT_FIXED_BUFFER",
+					"-DBLS_ETH=1",
 					"-DPIC",
 					"-fPIC",
 				);
