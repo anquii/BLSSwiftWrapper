@@ -1,6 +1,9 @@
+BLS_VERSION_TAG="v1.24"
+MCL_VERSION_TAG="v1.61"
+
 BASE_DIR=$PWD
-FRAMEWORK=BLSSwiftWrapper
-CONFIGURATION=Release
+FRAMEWORK="BLSSwiftWrapper"
+CONFIGURATION="Release"
 PROJECT="$BASE_DIR/$FRAMEWORK.xcodeproj"
 
 ARCHIVE_DIR="$BASE_DIR/Archives"
@@ -20,48 +23,54 @@ mkdir -p $RELEASE_DIR
 
 pushd "$BASE_DIR/Submodules/bls"
 git reset --hard
+git checkout $BLS_VERSION_TAG
 git apply "$BASE_DIR/bls.patch"
+
+pushd "$BASE_DIR/Submodules/bls/mcl"
+git reset --hard
+git checkout $MCL_VERSION_TAG
+git apply "$BASE_DIR/mcl.patch"
 
 # macosx
 xcodebuild archive                                          \
     -project $PROJECT                                       \
     -scheme $FRAMEWORK                                      \
     -configuration $CONFIGURATION                           \
-    -sdk macosx                                             \
+    -sdk "macosx"                                           \
     -archivePath $ARCHIVE_DIR_MACOSX                        \
-    ONLY_ACTIVE_ARCH=NO                                     \
-    SWIFT_SERIALIZE_DEBUGGING_OPTIONS=NO
+    ONLY_ACTIVE_ARCH="NO"                                   \
+    SWIFT_SERIALIZE_DEBUGGING_OPTIONS="NO"
 
 # iphoneos
 xcodebuild archive                                          \
     -project $PROJECT                                       \
     -scheme $FRAMEWORK                                      \
     -configuration $CONFIGURATION                           \
-    -sdk iphoneos                                           \
+    -sdk "iphoneos"                                         \
     -archivePath $ARCHIVE_DIR_IPHONEOS                      \
-    ONLY_ACTIVE_ARCH=NO                                     \
-    SWIFT_SERIALIZE_DEBUGGING_OPTIONS=NO
+    ONLY_ACTIVE_ARCH="NO"                                   \
+    SWIFT_SERIALIZE_DEBUGGING_OPTIONS="NO"
 
 # iphonesimulator
 xcodebuild archive                                          \
     -project $PROJECT                                       \
     -scheme $FRAMEWORK                                      \
     -configuration $CONFIGURATION                           \
-    -sdk iphonesimulator                                    \
+    -sdk "iphonesimulator"                                  \
     -archivePath $ARCHIVE_DIR_IPHONESIMULATOR               \
-    ONLY_ACTIVE_ARCH=NO                                     \
-    SWIFT_SERIALIZE_DEBUGGING_OPTIONS=NO
+    ONLY_ACTIVE_ARCH="NO"                                   \
+    SWIFT_SERIALIZE_DEBUGGING_OPTIONS="NO"
 
 # bundle
-xcodebuild archive                                                                                          \
-    -create-xcframework                                                                                     \
-    -framework "$ARCHIVE_DIR_MACOSX/Products/Library/Frameworks/$FRAMEWORK.framework"                       \
-    -debug-symbols "$ARCHIVE_DIR_MACOSX/dSYMs/$FRAMEWORK.framework.dSYM"                                    \
-    -framework "$ARCHIVE_DIR_IPHONEOS/Products/Library/Frameworks/$FRAMEWORK.framework"                     \
-    -debug-symbols "$ARCHIVE_DIR_IPHONEOS/dSYMs/$FRAMEWORK.framework.dSYM"                                  \
-    -debug-symbols `find "$ARCHIVE_DIR_IPHONEOS/BCSymbolMaps" -name "*.bcsymbolmap" -type f -maxdepth 1`    \
-    -framework "$ARCHIVE_DIR_IPHONESIMULATOR/Products/Library/Frameworks/$FRAMEWORK.framework"              \
-    -debug-symbols "$ARCHIVE_DIR_IPHONESIMULATOR/dSYMs/$FRAMEWORK.framework.dSYM"                           \
+xcodebuild archive                                                                                              \
+    -create-xcframework                                                                                         \
+    -framework "$ARCHIVE_DIR_MACOSX/Products/Library/Frameworks/$FRAMEWORK.framework"                           \
+    -debug-symbols "$ARCHIVE_DIR_MACOSX/dSYMs/$FRAMEWORK.framework.dSYM"                                        \
+    -framework "$ARCHIVE_DIR_IPHONEOS/Products/Library/Frameworks/$FRAMEWORK.framework"                         \
+    -debug-symbols "$ARCHIVE_DIR_IPHONEOS/dSYMs/$FRAMEWORK.framework.dSYM"                                      \
+    -debug-symbols `find "$ARCHIVE_DIR_IPHONEOS/BCSymbolMaps" -name "*.bcsymbolmap" -type f | sort | tail -1`   \
+    -framework "$ARCHIVE_DIR_IPHONESIMULATOR/Products/Library/Frameworks/$FRAMEWORK.framework"                  \
+    -debug-symbols "$ARCHIVE_DIR_IPHONESIMULATOR/dSYMs/$FRAMEWORK.framework.dSYM"                               \
     -output "$RELEASE_DIR/$OUTPUT_FILENAME"
 
 # zip
