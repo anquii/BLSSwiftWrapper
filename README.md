@@ -14,11 +14,12 @@ A Swift package wrapper of [herumi/bls](https://github.com/herumi/bls) in binary
 
 ### Swift Package Manager
 
-Add the following line to your `Package.swift` file:
+Add the following lines to your `Package.swift` file:
 ```swift
-.package(url: "https://github.com/anquii/BLSSwiftWrapper.git", from: "1.24.0")
+.package(url: "https://github.com/anquii/MCLSwiftWrapper.git", .exact("1.61.0"),
+.package(url: "https://github.com/anquii/BLSSwiftWrapper.git", .exact("1.24.0")
 ```
-...or integrate with Xcode via `File -> Swift Packages -> Add Package Dependency...` using the URL of the repository.
+...or integrate with Xcode via `File -> Swift Packages -> Add Package Dependency...` using the repository URLs from the lines above.
 
 ## License
 
