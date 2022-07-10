@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "mclswiftwrapper",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/anquii/MCLSwiftWrapper.git",
+      "state" : {
+        "revision" : "930124008ae3c156de3e73eb8c5748c6d5a482c6",
+        "version" : "1.61.0"
+      }
+    }
+  ],
+  "version" : 2
+}
