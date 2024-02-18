@@ -1544,7 +1544,7 @@
 					"$(PROJECT_DIR)/Submodules/bls/include/**",
 					"$(PROJECT_DIR)/Submodules/bls/mcl/include/**",
 				);
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright (c) 2022 anquii";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright (c) 2024 anquii";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "";
 				LIBRARY_SEARCH_PATHS = "";
@@ -1631,7 +1631,7 @@
 					"$(PROJECT_DIR)/Submodules/bls/include/**",
 					"$(PROJECT_DIR)/Submodules/bls/mcl/include/**",
 				);
-				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright (c) 2022 anquii";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright (c) 2024 anquii";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "";
 				LIBRARY_SEARCH_PATHS = "";
@@ -1680,7 +1680,8 @@
 				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_SEARCH_PATHS = "";
-				MARKETING_VERSION = 1.24.0;
+				MARKETING_VERSION = 1.24.1;
+				MERGEABLE_LIBRARY = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = anquii.BLSSwiftWrapper;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1712,7 +1713,8 @@
 				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_SEARCH_PATHS = "";
-				MARKETING_VERSION = 1.24.0;
+				MARKETING_VERSION = 1.24.1;
+				MERGEABLE_LIBRARY = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = anquii.BLSSwiftWrapper;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1765,7 +1767,7 @@
 			repositoryURL = "https://github.com/anquii/MCLSwiftWrapper.git";
 			requirement = {
 				kind = exactVersion;
-				version = 1.61.0;
+				version = 1.61.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

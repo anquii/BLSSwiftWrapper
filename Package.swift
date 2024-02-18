@@ -17,8 +17,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "BLSSwiftWrapper",
-            url: "https://github.com/anquii/BLSSwiftWrapper/releases/download/v1.24.0/BLSSwiftWrapper.zip",
-            checksum: "66fcd26498cddcfe8cdd1ed71aa65bf39b6fe0381c144e9987e72565ba8ae6ef"
+            url: "https://github.com/anquii/BLSSwiftWrapper/releases/download/v1.24.1/BLSSwiftWrapper.zip",
+            checksum: "ef72d31cd4ce93a0010da95038ec4562904bd17f8d83cf912f8bdc790be47f89"
         )
     ]
 )
